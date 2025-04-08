@@ -1,0 +1,785 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(68, 3, 83);
+}
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4vw;
+  color: rgb(169, 23, 23);
+  margin: 30px auto;
+}
+li {
+  list-style: none;
+}
+
+.logo {
+  width: 5em;
+}
+/* Mobile design first approach */
+
+@media (max-width: 768px) {
+  /* Header Styles */
+  .site-header {
+    background-color: #1e1e2f;
+    color: white;
+    padding: 1rem;
+  }
+
+  /* Navbar Grid Layout */
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    position: relative;
+  }
+
+  /* Logo */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* Menu Icon */
+  .menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* Hide Checkbox */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Nav Links (hidden by default) */
+  .nav-links {
+    display: none;
+    list-style: none;
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .nav-links li:hover {
+    background-color: #1b1b2a;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+
+  /* Toggle Menu with Checkbox */
+  .nav-toggle:checked + .menu-icon + .nav-links {
+    display: grid;
+    background-color: #2a2a3d;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  /* home content styles */
+  .description {
+    font-size: 2vw;
+    line-height: 1.5;
+    color: #333;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .description:hover {
+    box-shadow: 0 0 10px rgba(7, 1, 18, 0.352),
+      0 0 30px rgba(235, 230, 230, 0.412), 0 0 10px rgba(10, 8, 15, 0.24);
+    cursor: pointer;
+  }
+
+  /* about me styles */
+  #about {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  #about p:hover {
+    box-shadow: 0 0 10px rgba(7, 1, 18, 0.352),
+      0 0 30px rgba(235, 230, 230, 0.412), 0 0 10px rgba(10, 8, 15, 0.24);
+    cursor: pointer;
+  }
+
+  #about h2 {
+    font-size: 4vw;
+    color: rgb(169, 23, 23);
+    margin: 10px auto;
+  }
+
+  #about p {
+    width: 80%;
+    font-size: 2vw;
+    line-height: 1.5;
+    color: #333;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  /* Experience section styles */
+
+  #experience {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  #experience h1 {
+    text-align: center;
+    font-size: 4vw;
+    color: rgb(169, 23, 23);
+    margin: 10px auto;
+  }
+
+  .experience {
+    background-color: #ffffff;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .experience:hover {
+    background-color: #ebebeb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .experience h3 {
+    font-size: 3vw;
+    color: rgb(3, 66, 20);
+    margin-bottom: 10px;
+  }
+
+  .company {
+    font-weight: bold;
+    color: #504e4e;
+  }
+
+  .period {
+    color: #9d9b9b;
+    margin-bottom: 10px;
+  }
+
+  .responsibility {
+    line-height: 1.5;
+  }
+
+  /* Project section styles */
+
+  #projects {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: #fff;
+  }
+
+  .project {
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 350px;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project h3 {
+    margin-top: 0;
+    color: #3a0acb;
+  }
+
+  .project p {
+    flex-grow: 1;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .project a {
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .project a:hover {
+    text-decoration: underline;
+  }
+
+  .project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .project-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .project:hover {
+    background-color: #edebf45d;
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(7, 1, 18, 0.352),
+      0 0 30px rgba(235, 230, 230, 0.412), 0 0 10px rgba(10, 8, 15, 0.24);
+  }
+
+  /*Contact section styles*/
+
+  /* Form styling */
+  form {
+    width: 80%;
+    padding: 20px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(132, 131, 134, 0.456);
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  form:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.301), 0 0 30px rgba(139, 139, 139, 0.6),
+      0 0 10px rgba(0, 0, 0, 0.7);
+  }
+
+  fieldset {
+    display: block;
+    min-width: 200px;
+    padding: 20px;
+    border: none;
+    background-color: #f5f5f8;
+  }
+
+  label {
+    display: block;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  option,
+  textarea {
+    width: 100%;
+    margin: 5px auto 15px auto;
+    height: 30px;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: #dcdbe17c;
+    color: rgb(7, 7, 7);
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 100px;
+  }
+
+  /* Submit button styling */
+  #submit {
+    width: 100%;
+    height: 40px;
+    margin: 10px auto;
+    font-size: large;
+    font-weight: bold;
+    background-color: #001d25;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+  }
+
+  #submit:hover {
+    background-color: #034823;
+    color: #b2eabe;
+  }
+}
+
+/* Tablet, laptop and desktop Styles */
+
+@media (min-width: 769px) {
+  /* Header Styles */
+  .site-header {
+    background-color: #1e1e2f;
+    color: rgb(188, 164, 255);
+    padding: 0.5rem;
+  }
+
+  /* Navbar Grid Layout */
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Logo */
+  .logo {
+    display: block;
+    margin-right: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* Menu Icon */
+  .menu-icon {
+    display: none; /* Hide on larger screens */
+  }
+
+  /* Hide Checkbox */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Nav Links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  /* Styling the links */
+  .nav-links li {
+    margin: 0 15px;
+  }
+
+  /* Navbar link styling */
+  .nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ebeaf5;
+    font-weight: bold;
+    position: relative; /* Needed for the ::after pseudo-element */
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+  }
+  /* Underline effect */
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #c9c6f3; /* Underline color */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+
+  /* On hover, expand the underline */
+  .nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  /* On hover, change link color */
+  .nav-links a:hover {
+    color: #c9c6f3;
+  }
+
+  /* home content styles */
+  .description {
+    font-size: 1.5vw;
+    line-height: 1.5;
+    color: #333;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .description:hover {
+    box-shadow: 0 0 10px rgba(7, 1, 18, 0.352),
+      0 0 30px rgba(235, 230, 230, 0.412), 
+      0 0 10px rgba(10, 8, 15, 0.24);
+    cursor: pointer;
+  }
+
+  /* about me styles */
+  #about {
+    display: block;
+    margin: 200px auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  #about h2 {
+    font-size: 4vw;
+    color: rgb(169, 23, 23);
+    margin: 10px auto;
+  }
+
+  #about p {
+    width: 80%;
+    font-size: 2vw;
+    line-height: 1.5;
+    color: #333;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #about p:hover {
+        background-color: #edebf45d;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(7, 1, 18, 0.352),
+          0 0 30px rgba(235, 230, 230, 0.412), 
+          0 0 10px rgba(10, 8, 15, 0.24);
+      }
+  
+
+  /* Experience section styles */
+
+  #experience {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  #experience h1 {
+    text-align: center;
+    font-size: 4vw;
+    color: rgb(169, 23, 23);
+    margin: 10px auto;
+  }
+
+  .experience {
+    background-color: #ffffff;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .experience:hover {
+    background-color: #ebebeb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .experience h3 {
+    font-size: 2.5vw;
+    color: rgb(3, 66, 20);
+    margin-bottom: 10px;
+  }
+
+  .company {
+    font-weight: bold;
+    color: #504e4e;
+  }
+
+  .period {
+    color: #9d9b9b;
+    margin-bottom: 10px;
+  }
+
+  .responsibility {
+    line-height: 1.5;
+  }
+
+  /* Project section styles */
+
+  #projects {
+    width: 90%;
+    margin: 100px auto;
+  }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
+    background-color: #fff;
+  }
+
+  .project {
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 450px;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project h3 {
+    margin-top: 0;
+    color: #3a0acb;
+  }
+
+  .project p {
+    flex-grow: 1;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .project a {
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .project a:hover {
+    text-decoration: underline;
+  }
+
+  .project img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .project-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .project:hover {
+    background-color: #edebf45d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(7, 1, 18, 0.352),
+      0 0 30px rgba(235, 230, 230, 0.412), 
+      0 0 10px rgba(10, 8, 15, 0.24);
+  }
+
+    /*Contact section styles*/
+                    
+        /* Form styling */
+        form{
+            width: 80%;
+            max-width: 700px;
+            padding: 20px;
+            margin: 10px auto;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(132, 131, 134, 0.456);
+            transition: box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        form:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.301), 
+                        0 0 30px rgba(139, 139, 139, 0.6), 
+                        0 0 10px rgba(0, 0, 0, 0.7);
+        
+        }
+
+        fieldset {
+            
+            display: block;
+            min-width: 300px;
+            padding: 20px;
+            border: none;
+            background-color: #f5f5f8;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        
+        }
+
+        label {
+            display: block;
+            
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], select, option, textarea {
+            width: 100%;
+            margin: 5px auto 15px auto;
+            height: 30px;
+            padding: 10px;
+            border-radius: 3px;
+            border: none;
+            background-color: #dcdbe17c;
+            color: rgb(7, 7, 7);
+        }
+
+
+        input[type="radio"], input[type="checkbox"] {
+            margin: 10px;
+        }
+
+        textarea{
+            width: 100%;
+            min-height: 100px;
+        }
+
+        /* Submit button styling */
+        #submit {
+            width: 100%;
+            height: 40px;
+            margin: 10px auto;
+            font-size: large;
+            font-weight: bold;
+            background-color: #001d25;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+        }
+
+        #submit:hover {
+            background-color: #034823;
+            color: #b2eabe;
+            
+        }
+
+
+
+}
+
+/* Home Content Styles */
+.profile-pix {
+  display: block;
+  width: 20%;
+  max-width: 150px;
+  height: auto;
+  margin: 20px auto;
+  margin-top: 5%;
+  padding: 3px;
+  border-radius: 50%;
+  border: 2px solid #ccccd756;
+}
+
+#home {
+  display: block;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.name {
+  font-size: 4vw;
+  color: rgb(3, 66, 20);
+}
+
+/* Experience Section Styles */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Footer styling */
+footer{
+    margin: 50px auto 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2c7a9e;
+}
+
+button:last-child {
+    padding: 10px 20px;
+    border: none;
+    margin: 10px auto;
+    text-decoration: none;
+    color: rgb(203, 185, 185);
+    border-radius: 3px;
+    background-color: #ddcaf1;
+    margin-bottom: 2px;
+
+}
+
+button:last-child:hover {
+    padding: 10px 20px;
+    border: none;
+    margin: 10px auto;
+    text-decoration: none;
+    color: rgb(203, 185, 185);
+    border-radius: 3px;
+    background-color: #bf92ef;
+    margin-bottom: 2px;
+    cursor: pointer;
+
+}
+
+
+

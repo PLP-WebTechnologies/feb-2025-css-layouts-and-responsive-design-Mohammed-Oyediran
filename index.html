@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- Navigation Bar -->
+  <header class="site-header" id="top">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="https://academy.powerlearnprojectafrica.org/assets/logoLong.CvEnjPvT.svg" alt="logo" class="logo"></div>
+
+      <!-- Hamburger Menu Toggle -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="menu-icon">&#9776;</label>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" >
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+   <!--Home Section-->
+   <section id="home">
+   <img src="https://avatars.githubusercontent.com/u/199047490?v=4" alt="profile picture" class="profile-pix">
+       <div class="description">
+           <p>Hi, my name is</p>
+           <p class="name">Mohammed Oyediran.</p>
+           <p class="action">I want to build things for the web.</p>
+           <div class="summary">
+               <p>I'm an aspiring Software Engineer that will be specializing in building scalable software solutions. 
+               Currently, I am learning on building accessible, human-centered products at <a href="https://academy.powerlearnprojectafrica.org" target="_blank" class="plp-link">PLP Academy.</a>
+               </p>
+           </div>
+           
+       </div>
+   </section>
+<!--About me section-->
+   <section id="about">
+       <h2>About Me</h2>
+       <p>I am a mathematician with passion for software engineering and a strong interest in web development and design. 
+       I hope to create user-friendly interfaces and optimize performance for a seamless user experience.</p>
+    </section>
+
+<!--Experience Section-->
+<section id="experience">
+  <h1>Experience</h1>
+
+  <div class="experience-grid">
+    <div class="experience">
+      <h3>Lead Math Instructor</h3>
+      <div class="company">Mathnasium, Dubai, United Arab Emirates</div>
+      <div class="period">Feb 2020 - Dec 2024</div>
+      <div class="responsibility">
+        <ul>
+        <li>Responsible for teaching students from year 5 to 13.</li>
+        <li>Created and implemented lesson plans that catered to the individual needs of students.</li>
+        </ul>
+            
+      </div>
+    </div>
+
+    <div class="experience">
+      <h3>Data Analyst</h3>
+      <div class="company">LuckyFlex Limited, Lagos - Nigeria</div>
+      <div class="period">May 2018 - Dec 2019</div>
+      <div class="responsibility">
+        Analyzed data sets to identify trends and patterns, providing actionable insights to improve business operations.
+      </div>
+    </div>
+
+    <div class="experience">
+      <h3>National Youth Service Corps</h3>
+      <div class="company">Moribodo College, Ondo State - Nigeria</div>
+      <div class="period">June 2017 - April 2018</div>
+      <div class="responsibility">
+        Responsible for teaching Mathematics and Computer Science to students in senior secondary school.
+      </div>
+    </div>
+
+    <div class="experience">
+      <h3>Statistics Intern</h3>
+      <div class="company">A.C.I.C Limited, Abeokuta - Nigeria</div>
+      <div class="period">June 2015 - Dec 2015</div>
+      <div class="responsibility">
+        Assisted in data collection and analysis for various projects, contributing to the overall success of the team.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Project section-->
+
+<section id="projects">
+  <h1>Projects</h1>
+
+  <div class="projects">
+    <div class="project">
+      <img src="https://user-images.githubusercontent.com/54157462/179115648-33edd009-c8b7-4a8e-b0c8-aae7c9af7dcb.png" alt="Project 1">
+      <div class="project-content">
+        <h3>Task Manager App</h3>
+        <p>A web app to create, track, and manage tasks with deadlines. Built using React and Firebase.</p>
+        <a href="https://github.com/yourusername/task-manager" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/06/Portfolio-site-of-the-front-end-developer-Ian-Dunkerley-1024x481.webp" alt="Project 2">
+      <div class="project-content">
+        <h3>Portfolio Website</h3>
+        <p>A clean and modern personal portfolio website showcasing skills and projects.</p>
+        <a href="https://github.com/yourusername/portfolio" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://www.figma.com/community/resource/c5ab864c-3b63-4997-8366-38b4b9603d95/thumbnail" alt="Project 3">
+      <div class="project-content">
+        <h3>Weather Dashboard</h3>
+        <p>A responsive weather app that fetches real-time weather data using OpenWeatherMap API.</p>
+        <a href="https://github.com/yourusername/weather-dashboard" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!--Contact section-->
+ <section id="contact">
+  <h1>Contact</h1>
+  <div class="contact">
+     <form action="post">
+     
+          <fieldset>
+              <label for="name">
+                  Name: 
+                  <input id="name" type="text" placeholder="ex. John Doe" required>
+              </label>
+              <label for="email">
+                  Email: 
+                  <input id="email" type="email" placeholder="example@mail.com" required>
+              </label>
+             <label for="number">
+                  Contact:
+                  <input id="number" type="text" placeholder="+123456789" required>
+             </label>
+              </label>
+          </fieldset>
+          <fieldset>
+              <legend>Gender</legend>
+              <label for="male">
+                  <input name="gender" id="male" type="radio" value="male"> Male
+              </label>
+              <label for="female">
+                  <input name="gender" id="female" type="radio" value="female"> Female
+              </label>
+          </fieldset>
+          <fieldset>
+              <legend>In which area do you require our services?</legend>
+              <label for="frontend">
+                  
+                  <input id="frontend" type="checkbox" name="stack" value="frontend"> Front End Development
+              </label>
+              <label for="backend">
+                  
+                  <input id="backend" type="checkbox" name="stack" value="backend"> Back End Development
+              </label>
+              <label for="design">
+                  
+                  <input id="design" type="checkbox" name="stack" value="design"> Product Design
+              </label>
+              <label for="analysis">
+                  
+                  <input id="analysis" type="checkbox" name="stack" value="analysis"> Data Analysis
+              </label>
+              <label for="others">
+                  
+                  <input id="others" type="checkbox" name="stack" value="others"> Others
+              </label>
+              
+          </fieldset>
+          <fieldset>
+              <legend>How do you hear about us? </legend>
+              <select>
+                  <option disabled>Choose an option</option>
+                  <option value="search engine">Search engine</option>
+                  <option value="Friends">Friends</option>
+                  <option value="social media">Social Media</option>
+                  <option value="others">Others</option>
+              </select>
+          </fieldset>
+          <fieldset>
+              <Legend>Leave a message</Legend>
+              <textarea placeholder="Please leave a message..."></textarea>
+          </fieldset>
+          <button type="submit" id="submit">Submit</button>
+     </form>
+  </div>
+
+</section>
+  <!--Footer section-->
+  <footer>
+    <p>Mohammed Oyediran</p>
+    <p>&copy;2025 PLP Software Engineering Scholar</p>
+    <p>All rights reserved.</p>
+    <button><a href="#top">Return to the Top</a></button>
+</footer>
+
+</body>
+</html>
