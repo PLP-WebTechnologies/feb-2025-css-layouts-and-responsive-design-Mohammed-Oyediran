@@ -12,7 +12,7 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(68, 3, 83);
+    color: inherit;
 }
 
 header {
@@ -23,6 +23,7 @@ header {
   width: 100%;
 }
 
+
 h1 {
   text-align: center;
   font-size: 4vw;
@@ -32,6 +33,23 @@ h1 {
 li {
   list-style: none;
 }
+
+.cv {
+    display: block;
+    margin: 50px auto !important;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(165, 8, 8) 
+    !important;
+    color: white !important;
+    cursor: pointer;
+    font-weight: bold; 
+    font-size: 60%;
+    
+}
+
+
 
 .logo {
   width: 5em;
@@ -756,12 +774,14 @@ footer{
     color: #2c7a9e;
 }
 
+
+
 button:last-child {
     padding: 10px 20px;
     border: none;
     margin: 10px auto;
     text-decoration: none;
-    color: rgb(203, 185, 185);
+    color: rgb(42, 2, 2);
     border-radius: 3px;
     background-color: #ddcaf1;
     margin-bottom: 2px;
@@ -773,7 +793,7 @@ button:last-child:hover {
     border: none;
     margin: 10px auto;
     text-decoration: none;
-    color: rgb(203, 185, 185);
+    color: rgb(0, 0, 0);
     border-radius: 3px;
     background-color: #bf92ef;
     margin-bottom: 2px;
